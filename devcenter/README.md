@@ -3,7 +3,7 @@
 The pages in this folder are published on the
 [Altium Developer Center documentation](https://www.altium.com/documentation/altium-developer-center) portal, not on
 the reference site. They are the stable introduction and quick start; everything that changes with each release
-(the tools, sample prompts, troubleshooting) lives on the reference site, built from [`docs/`](../docs/).
+(the tools, sample prompts, troubleshooting) lives on the reference site, built from [`content/`](../content/README.md).
 
 | Source | Dev Center page | Where it sits |
 | --- | --- | --- |
@@ -20,7 +20,7 @@ page as it is: the title is the `# H1`, and the portal adds its own summary ("At
 
 - **Plain Markdown.** No front matter, MDX or HTML, so a page pastes into the portal as it is.
 - **Absolute links.** Links to the reference site use its full URL, `https://docs.developer.altium.com/ad-mcp-docs/…`,
-  with the trailing slash. The site build checks that every such link resolves to a page and, for a `#fragment`, to
+  with the trailing slash. `npm run build` checks that every such link resolves to a page and, for a `#fragment`, to
   a heading on it, so a page that moves or a renamed heading on the reference site fails the build here first.
   The only relative links are to the screenshots in `images/`.
 - **Stable content.** Keep these pages to what changes rarely: what the server is, what it is for, how to install and
