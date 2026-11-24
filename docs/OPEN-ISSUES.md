@@ -9,8 +9,8 @@ unknowns are here.
    Put them back in:
    - `website/pages.cjs`: the URLs in `DEVELOPER_CENTER`, and two entries at the top of the Get started section,
      "About the server" and "Quick start";
-   - `docs/index.mdx`: a sentence after the intro pointing to the overview and the Quick Start Guide;
-   - `docs/how-it-works.md`: the last paragraph's "list of capabilities" (the manual's "list in section 1.2"), linked
+   - `content/index.mdx`: a sentence after the intro pointing to the overview and the Quick Start Guide;
+   - `content/how-it-works.md`: the last paragraph's "list of capabilities" (the manual's "list in section 1.2"), linked
      to the overview;
    - `website/scripts/llms.mjs`: the `llms.txt` lead, which links only the Developer Center docs home for now;
    - `devcenter/altium-designer-mcp.md`: the Quick Start Guide as the first item of "Get started" (republish).

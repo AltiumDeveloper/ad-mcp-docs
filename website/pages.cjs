@@ -13,7 +13,7 @@ const path = require('node:path');
 const REPO_ROOT = path.resolve(__dirname, '..');
 
 // Altium Developer Center. The pages built from devcenter/ (see devcenter/README.md) are not linked yet: add their
-// URLs here (and the sidebar links and page links listed in OPEN-ISSUES.md) once they are published.
+// URLs here (and the sidebar links and page links listed in docs/OPEN-ISSUES.md) once they are published.
 const DEVELOPER_CENTER = {
   home: 'https://developer.altium.com/',
   docs: 'https://www.altium.com/documentation/altium-developer-center',
@@ -30,7 +30,7 @@ const SECTIONS = [
     label: 'Overview',
     kind: 'guide',
     pages: [
-      { file: 'docs/index.mdx', route: '/', label: 'Overview', description: 'Reference for the Altium Designer MCP Server: tools, sample prompts and guides.' },
+      { file: 'content/index.mdx', route: '/', label: 'Overview', description: 'Reference for the Altium Designer MCP Server: tools, sample prompts and guides.' },
     ],
   },
   {
@@ -38,8 +38,8 @@ const SECTIONS = [
     label: 'Get started',
     kind: 'guide',
     pages: [
-      { file: 'docs/setup.md', route: '/setup/', label: 'Getting started', description: 'Requirements, each supported AI client, configuring a client by hand, experimental tools and updating.' },
-      { file: 'docs/sample-prompts.md', route: '/sample-prompts/', label: 'Try it now', description: 'Twelve prompts to try on a real board, for design review and for schematic symbols.' },
+      { file: 'content/setup.md', route: '/setup/', label: 'Getting started', description: 'Requirements, each supported AI client, configuring a client by hand, experimental tools and updating.' },
+      { file: 'content/sample-prompts.md', route: '/sample-prompts/', label: 'Try it now', description: 'Twelve prompts to try on a real board, for design review and for schematic symbols.' },
     ],
   },
   {
@@ -47,11 +47,11 @@ const SECTIONS = [
     label: 'Guides',
     kind: 'guide',
     pages: [
-      { file: 'docs/working-with-the-llm.md', route: '/working-with-the-llm/', label: 'Working with the LLM', description: 'Ground rules, good prompts, steering tool use, outside information and approving tool calls.' },
-      { file: 'docs/symbols.md', route: '/symbols/', label: 'Schematic symbols', description: 'Create, validate and update symbols: the review gate, guidelines, conventions, shapes and multi-part parts.' },
-      { file: 'docs/how-it-works.md', route: '/how-it-works/', label: 'How it works', description: 'The MCP server vs the LLM, what the assistant sees, projects and variants, context drift, and why not your own MCP server.' },
-      { file: 'docs/multiple-instances.md', route: '/multiple-instances/', label: 'Multiple instances', description: 'Which copy of Altium Designer a conversation uses, and how to switch or pin it.' },
-      { file: 'docs/security.md', route: '/security/', label: 'Is it safe?', description: 'Local only, the write surface, the sandboxed query tool, and what leaves your machine.' },
+      { file: 'content/working-with-the-llm.md', route: '/working-with-the-llm/', label: 'Working with the LLM', description: 'Ground rules, good prompts, steering tool use, outside information and approving tool calls.' },
+      { file: 'content/symbols.md', route: '/symbols/', label: 'Schematic symbols', description: 'Create, validate and update symbols: the review gate, guidelines, conventions, shapes and multi-part parts.' },
+      { file: 'content/how-it-works.md', route: '/how-it-works/', label: 'How it works', description: 'The MCP server vs the LLM, what the assistant sees, projects and variants, context drift, and why not your own MCP server.' },
+      { file: 'content/multiple-instances.md', route: '/multiple-instances/', label: 'Multiple instances', description: 'Which copy of Altium Designer a conversation uses, and how to switch or pin it.' },
+      { file: 'content/security.md', route: '/security/', label: 'Is it safe?', description: 'Local only, the write surface, the sandboxed query tool, and what leaves your machine.' },
     ],
   },
   {
@@ -59,18 +59,18 @@ const SECTIONS = [
     label: 'Tool reference',
     kind: 'tool',
     pages: [
-      { file: 'docs/tools/index.md', route: '/tools/', label: 'All tools', description: 'Tool naming, tool families, and the tool groups.' },
-      // The labels and order of the home page cards (docs/index.mdx, from the manual's capability table). The
+      { file: 'content/tools/index.md', route: '/tools/', label: 'All tools', description: 'Tool naming, tool families, and the tool groups.' },
+      // The labels and order of the home page cards (content/index.mdx, from the manual's capability table). The
       // "Design & schematic data" card covers two pages, Design and Schematic data; Highlighting and Schematic library
       // have no card of their own and sit next to the cards they belong with.
-      { file: 'docs/tools/design.md', route: '/tools/design/', label: 'Design', icon: 'design', description: 'The open projects and the variants of a project.' },
-      { file: 'docs/tools/schematic.md', route: '/tools/schematic/', label: 'Schematic data', icon: 'schematic', description: 'The project summary, the query tool and sheet screenshots.' },
-      { file: 'docs/tools/erc.md', route: '/tools/erc/', label: 'Design review (ERC)', icon: 'erc', description: 'Compile and run the Electrical Rule Check, list violations, and read the ERC configuration.' },
-      { file: 'docs/tools/highlighting.md', route: '/tools/highlighting/', label: 'Highlighting', icon: 'highlight', description: 'Cross-probing: zoom to, select and highlight components, nets or pins on a sheet.' },
-      { file: 'docs/tools/history.md', route: '/tools/history/', label: 'History & revisions', icon: 'history', description: 'The project history feed, what a commit changed, and reading a committed revision.' },
-      { file: 'docs/tools/comments.md', route: '/tools/comments/', label: 'Collaboration', icon: 'comments', description: 'Altium 365 comment threads and replies on schematic objects.' },
-      { file: 'docs/tools/library.md', route: '/tools/library/', label: 'Schematic library', icon: 'symbols', description: 'Part lookup, reading a symbol pinout, and creating or updating a symbol.' },
-      { file: 'docs/tools/editing.md', route: '/tools/editing/', label: 'Schematic editing (experimental)', icon: 'editing', description: 'Experimental: read a sheet, place parts, draw wires and labels, and replicate blocks.' },
+      { file: 'content/tools/design.md', route: '/tools/design/', label: 'Design', icon: 'design', description: 'The open projects and the variants of a project.' },
+      { file: 'content/tools/schematic.md', route: '/tools/schematic/', label: 'Schematic data', icon: 'schematic', description: 'The project summary, the query tool and sheet screenshots.' },
+      { file: 'content/tools/erc.md', route: '/tools/erc/', label: 'Design review (ERC)', icon: 'erc', description: 'Compile and run the Electrical Rule Check, list violations, and read the ERC configuration.' },
+      { file: 'content/tools/highlighting.md', route: '/tools/highlighting/', label: 'Highlighting', icon: 'highlight', description: 'Cross-probing: zoom to, select and highlight components, nets or pins on a sheet.' },
+      { file: 'content/tools/history.md', route: '/tools/history/', label: 'History & revisions', icon: 'history', description: 'The project history feed, what a commit changed, and reading a committed revision.' },
+      { file: 'content/tools/comments.md', route: '/tools/comments/', label: 'Collaboration', icon: 'comments', description: 'Altium 365 comment threads and replies on schematic objects.' },
+      { file: 'content/tools/library.md', route: '/tools/library/', label: 'Schematic library', icon: 'symbols', description: 'Part lookup, reading a symbol pinout, and creating or updating a symbol.' },
+      { file: 'content/tools/editing.md', route: '/tools/editing/', label: 'Schematic editing (experimental)', icon: 'editing', description: 'Experimental: read a sheet, place parts, draw wires and labels, and replicate blocks.' },
     ],
   },
   {
@@ -78,8 +78,8 @@ const SECTIONS = [
     label: 'Help',
     kind: 'help',
     pages: [
-      { file: 'docs/troubleshooting.md', route: '/troubleshooting/', label: 'Troubleshooting', description: 'Symptoms and fixes for connecting, answers, workspace features and symbols.' },
-      { file: 'docs/glossary.md', route: '/glossary/', label: 'Glossary', description: 'LLM, MCP, clients and servers, tools, context, tokens, variants, revisions and comment threads.' },
+      { file: 'content/troubleshooting.md', route: '/troubleshooting/', label: 'Troubleshooting', description: 'Symptoms and fixes for connecting, answers, workspace features and symbols.' },
+      { file: 'content/glossary.md', route: '/glossary/', label: 'Glossary', description: 'LLM, MCP, clients and servers, tools, context, tokens, variants, revisions and comment threads.' },
     ],
   },
 ];
